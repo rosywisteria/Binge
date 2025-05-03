@@ -354,21 +354,6 @@ def match_dining_hall(user_id):
 #     db.session.commit()
 #     return jsonify(plate.serialize()),201
 
-
-# @app.route('/api/clear_database', methods=['POST'])
-# def clear_database():
-#     try:
-#         # Delete in reverse order of dependencies
-#         Swipe.query.delete()
-#         MenuItem.query.delete()
-#         DiningHall.query.delete()
-#         User.query.delete()
-        
-#         db.session.commit()
-#         return jsonify({'message': 'All data deleted'}), 200
-#     except Exception as e:
-#         db.session.rollback()
-#         return jsonify({'error': str(e)}), 500
     
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=8000, debug=True)
